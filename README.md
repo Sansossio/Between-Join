@@ -14,7 +14,7 @@ Install the dependencies and start the server.
 
 ```sh
 $ cd yourProject
-$ npm install between-join --savewo
+$ npm install between-join --save
 ```
 ### Expression
 Between-join must receive to parameter, 'expression'. The word '$1' into expression will be replaced by value of array or object
