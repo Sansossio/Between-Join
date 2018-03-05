@@ -8,7 +8,7 @@ This is a simple library for generate string (of object or array)
 
 ### Installation
 
-Syslogs files requires [Node.js](https://nodejs.org/) v8+ to run.
+Between-Join requires [Node.js](https://nodejs.org/) v8+ to run.
 
 Install the dependencies and start the server.
 
