@@ -1,6 +1,6 @@
 # Between-Join
 
-Join array into between expression for NodeJS
+Join array between expression for NodeJS
 
 ## What's this?
 

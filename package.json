@@ -1,7 +1,7 @@
 {
   "name": "between-join",
-  "version": "1.5.0",
-  "description": "Join array into between expression",
+  "version": "1.5.1",
+  "description": "Join array between expression",
   "main": "index.js",
   "scripts": {
     "start": "node ."
