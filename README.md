@@ -19,7 +19,7 @@ $ npm install between-join --savewo
 ### Expression
 Between-join must receive to parameter, 'expression'. The word '$1' into expression will be replaced by value of array or object
 ```js
-const exp = '>$1<`;
+const exp = '>$1<';
 ```
 # Examples
 ## Array
