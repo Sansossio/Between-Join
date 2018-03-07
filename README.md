@@ -16,6 +16,15 @@ Install the dependencies and start the server.
 $ cd yourProject
 $ npm install between-join --save
 ```
+## Parameters
+```
+BetweenJoin must receive 3 parametters (2 required):
+1) Object / Array [Required]
+2) Expression [Required]
+    - Expression must contain '$1' key
+3) Delete [Optional]
+    - Numeric param, erase last characters (1, ..., response.length)
+```
 ### Expression
 Between-join must receive to parameter, 'expression'. The word '$1' into expression will be replaced by value of array or object
 ```js
@@ -86,4 +95,29 @@ console.log(response);
 Output
 ```sh
 [array [Hello][World]][obj [print I'm a js object]]
+```
+
+## Deleting last character
+```js
+// Import
+const BetweenJoin = require('between-join');
+// Properties
+// Array
+const array = ['Hello', 'World'];
+// Expression
+const expression = '[$1]';
+// Response
+const normal = BetweenJoin(array, expression);
+const one = BetweenJoin(array, expression, 1);
+const two = BetweenJoin(array, expression, 2);
+// Print
+console.log(normal);
+console.log(one);
+console.log(two);
+```
+Output
+```sh
+[Hello][World]
+[Hello][World
+[Hello][Worl
 ```
