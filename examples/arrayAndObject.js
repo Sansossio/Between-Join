@@ -9,7 +9,7 @@ const values = {
   },
 };
 // Expression
-const expression = '[$1]';
+const expression = '[$1$2]';
 // Response
 const response = BetweenJoin(values, expression);
 // Print

@@ -21,12 +21,15 @@ $ npm install between-join --save
 BetweenJoin must receive 3 parametters (2 required):
 1) Object / Array [Required]
 2) Expression [Required]
-    - Expression must contain '$1' key
+    - Expression must contain '$1' key, and/or $2 if is jsobject
+      - Objects:
+        - $1 = Object key
+        - $2 = Object value
 3) Delete [Optional]
     - Numeric param, erase last characters (1, ..., response.length)
 ```
 ### Expression
-Between-join must receive to parameter, 'expression'. The word '$1' into expression will be replaced by value of array or object
+Between-join must receive to parameter, 'expression'. The word '$1' into expression will be replaced by value of array and '$1' and '$2' for object
 ```js
 const exp = '>$1<';
 ```
@@ -62,7 +65,7 @@ const obj = {
   key: 'Value',
 };
 // Expression
-const expression = '[$1]';
+const expression = '[$1-$2]';
 // Response
 const response = BetweenJoin(obj, expression);
 // Print
@@ -70,7 +73,7 @@ console.log(response);
 ```
 Output
 ```sh
-[hola World][key Value]
+[hola-World][key-Value]
 ```
 ## Object and array
 Code:
@@ -86,7 +89,7 @@ const values = {
   },
 };
 // Expression
-const expression = '[$1]';
+const expression = '[$1 $2]';
 // Response
 const response = BetweenJoin(values, expression);
 // Print
@@ -94,7 +97,7 @@ console.log(response);
 ```
 Output
 ```sh
-[array [Hello][World]][obj [print I'm a js object]]
+[array [Hello][World]][obj[printI'm a js object]]
 ```
 
 ## Deleting last character

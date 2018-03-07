@@ -1,6 +1,6 @@
 {
   "name": "between-join",
-  "version": "1.5.3",
+  "version": "1.5.4",
   "description": "Join array between expression",
   "main": "index.js",
   "scripts": {

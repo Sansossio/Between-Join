@@ -7,7 +7,7 @@ const obj = {
   key: 'Value',
 };
 // Expression
-const expression = '[$1]';
+const expression = '[$1-$2]';
 // Response
 const response = BetweenJoin(obj, expression);
 // Print
